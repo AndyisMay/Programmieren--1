@@ -40,6 +40,7 @@ int i = 0;
 }
 int main(){
     char getstring[] = "first,second";
+    printf("Geben Sie die beiden Eingaben durch ',' getrennt ein: ");
     fgets(getstring, 65, stdin);
     mix(getstring);
 }

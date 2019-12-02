@@ -35,7 +35,7 @@ int i = 0;
 
         case 2:
             while (first[i] != '\0'){
-                printf("%c%c", first[i], second[i]);
+                printf("%c%c", first[i], second[i]);i++;
             }
             while (second[i] != '\n'){
                 printf("%c", second[i]); i++;

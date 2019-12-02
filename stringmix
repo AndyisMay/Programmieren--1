@@ -2,7 +2,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-
 char* mix(char string[]) {
     const char delimiter[] = ",";
     char *first;
@@ -10,42 +9,35 @@ char* mix(char string[]) {
     char output[65];
     first = strtok(string, delimiter);
     second = strtok(NULL, delimiter);
-
     signed int a = strlen(first)-strlen(second);
 
     if (a >= 0) { a = 0; } // case 0
     if (a == -1) { a = 1; } // case 1
     if (a <= -2) { a = 2; } // case 2
 int i = 0;
-    switch (a) {
+    switch (a) 
+{
         case 0:
             while (second[i] != '\n') {
-                printf("%c%c", first[i], second[i]); i++;
-            }
+                printf("%c%c", first[i], second[i]); i++;}
             while (first[i] != '\0') {
                 printf("%c", first[i]); i++;
             }
             break;
-
         case 1:
             for (int i = 0; i < strlen(first); i++) {
                 printf("%c%c", first[i], second[i]);
             }
             break;
-
         case 2:
             while (first[i] != '\0'){
                 printf("%c%c", first[i], second[i]);i++;
             }
             while (second[i] != '\n'){
-                printf("%c", second[i]); i++;
-            }
+                printf("%c", second[i]); i++;}
             break;
-
-
-    }
+            }
 }
-
 int main(){
     char getstring[] = "first,second";
     fgets(getstring, 65, stdin);

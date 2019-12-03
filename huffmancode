@@ -10,7 +10,7 @@ int main() {
     printf("Bitte Wort eingeben!\n");
     fgets(string, 256, stdin);
 
-    while (string[i] != '\n') {
+    while (string[i] != '\0') {
         count[string[i]] = count[string[i]] + 1;
         i++;
     }

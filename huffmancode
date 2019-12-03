@@ -7,8 +7,8 @@ void output(int n);
 
 int main() {
 
-    printf("Bitte Satz eingeben!\n");
-    scanf("%s", &string);
+    printf("Bitte Wort eingeben!\n");
+    fgets(string, 256, stdin);
 
     while (string[i] != '\0') {
         count[string[i]] = count[string[i]] + 1;
@@ -24,7 +24,7 @@ int main() {
 
 void output(int n) {
 
-    for (int y = 0; y < 256; y++) {
+    for (int y = 33; y < 256; y++) {
         if (count[y] == n) {
             printf("%c %d\n", y, count[y]);
         }
